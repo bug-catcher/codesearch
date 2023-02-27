@@ -21,7 +21,8 @@ DATASET_BASE_URL = BASE_URL
 
 MODULE_DIR = Path(__file__).parent.absolute()
 
-DATA_DIR = Path(os.environ.get("CODE_SEARCH_DATA_DIR", str(MODULE_DIR/"data")))
+#DATA_DIR = Path(os.environ.get("CODE_SEARCH_DATA_DIR", str(MODULE_DIR/"data")))
+DATA_DIR = Path("nbs")
 
 if not DATA_DIR.exists():
     DATA_DIR.mkdir()
@@ -40,6 +41,9 @@ if not MODELS_DIR.exists():
 SNIPPET_COLLECTIONS = {
     "so-ds-feb20": {
         "path": DATASETS_DIR/"so-ds-feb20.jsonl",
+        "url": DATASET_BASE_URL.format("so-ds-feb20.jsonl.gz")},
+    "so-ds-feb20-test": {
+        "path": DATASETS_DIR / "so-ds-feb20-test.jsonl",
         "url": DATASET_BASE_URL.format("so-ds-feb20.jsonl.gz")},
     "staqc-py-cleaned": {
         "path": DATASETS_DIR/"staqc-py-cleaned.jsonl",
@@ -156,6 +160,9 @@ MODELS = {
     "tnbow-embedder-so-ds-feb20": {
         "path": MODELS_DIR/"tnbow-embedder-so.feb20",
         "url": DATASET_BASE_URL.format("tnbow-embedder-so.tar.gz")
+    },
+    "../ncs/so-ds-feb20/best_ncs_embedder/": {
+
     }
 }
 
