@@ -58,7 +58,7 @@ class RetrievalModel(Saveable):
         line2 = "-" * 40
         line3 = "-" * 10
         for q in queries:
-            results = self.query(q, n=5, projection=projection)
+            results = self.query(q, n=1, projection=projection)
             print(line1)
             print(f"QUERY: {q}")
             print(line1)
