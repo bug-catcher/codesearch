@@ -1,0 +1,13 @@
+Click
+tree-sitter
+spacy
+dill 
+scikit-learn==0.22.1
+ipywidgets
+pandas
+tqdm
+torch
+fastai
+tensorflow
+tensorflow_hub
+
